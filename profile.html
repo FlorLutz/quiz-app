@@ -13,7 +13,7 @@
         <picture>
           <img
             class="profile__foto"
-            src="images/profile.png"
+            src="images/profile_foto.jpg"
             alt="profile foto"
           />
         </picture>
@@ -46,26 +46,29 @@
       </section>
       <section class="settings">
         <h2>Settings</h2>
-        <label for="dark-mode">Dark Mode</label>
-        <input id="dark-mode" type="checkbox" />
+        <div class="settings__dark">
+          <p class="settings__dark-label">Dark Mode</p>
+
+          <!-- This code is copied together with the according css to create the switch. -->
+          <label class="switch" id="dark-mode">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </section>
     </main>
     <footer>
       <nav>
-        <div class="nav__item">
-          <a href="index.html">
-            <img class="footer__image" src="images/home.png" alt="home" />
-          </a>
-        </div>
-        <div class="nav__item">
-          <a href="bookmarks.html">
-            <img class="footer__image" src="images/bookmarks.png" alt="home" />
-          </a>
-        </div>
-        <div class="nav__item" style="background-color: yellow">
-          <a href="profile.html">
-            <img class="footer__image" src="images/profile.png" alt="home" />
-          </a>
+        <!-- The a-elements can fill out all the space, when giving them the value "block" block to the prop "display" -->
+        <a class="nav__item" href="index.html">
+          <img class="footer__image" src="images/home.png" alt="home" />
+        </a>
+        <a class="nav__item" href="bookmarks.html">
+          <img class="footer__image" src="images/bookmarks.png" alt="home" />
+        </a>
+        <a class="nav__item nav__item--selected" href="profile.html">
+          <img class="footer__image" src="images/profile.png" alt="home" />
+        </a>
         </div>
       </nav>
     </footer>

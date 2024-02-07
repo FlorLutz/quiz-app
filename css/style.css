@@ -1,12 +1,8 @@
-:root {
-    --primary-color: white;
-    --secondary-color: black;
-    --color-foot-head: blue;
-    --color-boxes: lightblue;
-    --color-boxes-border: rgb(90, 114, 122);
-    --color-tag: #f4f467;
-    --color-active: yellow;
-}
+@import url("card.css");
+@import url("bookmarks.css");
+@import url("profile.css");
+@import url("switch.css");
+@import url("variables.css");
 
 * {
     padding: 0;
@@ -27,77 +23,28 @@ header {
     text-align: center;
     padding: 20px;
     font-size: 1.5rem;
+    z-index: 1;
+    border: solid 2px var(--color-foot-head-border);
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 110px;
-    margin-bottom: 110px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-.card {
-    background-color: var(--color-boxes);
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    border: 2px solid var(--color-boxes-border);
-}
-
-.card__bookmark {
-    width: 40px;
-    position: absolute;
-    top: -5px;
-    right: 10px;
-}
-
-.card__question {
-    font-size: 2em;
-}
-
-.card__button {
-    width: 100px;
-}
-
-.card__button:hover {
-    background-color: var(--color-active);
-}
-
-.card__tag-box {
-    display: flex;
-    gap: 5px;
-    background-color: var(--color-boxes);
-}
-
-.card__tag {
-    background-color: var(--color-tag);
-    border-radius: 5px;
-    padding: 2px;
+    gap: 3vw;
+    margin: 110px 5vw;
 }
 
 footer {
     position: fixed;
     background-color: var(--color-foot-head);
+    width: 100vw;
     bottom: 0;
+    border: solid 2px var(--color-foot-head-border);
 }
 
 .footer__image {
     height: 50px;
 }
-
-footer li:hover {
-    background-color: var(--color-tag);
-}
-
 
 nav {
     display: flex;
@@ -109,38 +56,55 @@ nav {
     width: calc(100vw/3);
     text-align: center;
     padding: 10px;
+    display: block;
 }
 
-.profile {
-    display: flex;
-    flex-direction: row;
-}
-
-.profile__foto {
-    border-radius: 50%;
-    width: 100px;
-    display: inline;
-}
-
-.profile__name {
-    font-size: 2rem;
-    font-weight: bold;
-    align-self: center;
-    margin-left: 20px;
-}
-
-.counters {
-    display: flex;
-    gap: 10px;
-}
-
-.counter {
+.nav__item:not(.nav__item--selected):hover {
     background-color: var(--color-tag);
-    border-radius: 5px;
-    padding: 2px;
-    display: flex;
 }
 
-.counter__icon {
-    height: 30px;
+.nav__item--selected {
+    background-color: var(--color-current-page);
+}
+
+@media (min-width: 900px) {
+    :root {
+        font-size: 20px;
+    }
+
+    main {
+        margin-top: 130px;
+    }
+
+    .main-quiz {
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: calc(87vw/2);
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 24px;
+    }
+
+    main {
+        margin-top: 150px;
+
+        .card {
+            width: calc(84vw/3);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
+
+    body {
+        background-color: black;
+    }
 }

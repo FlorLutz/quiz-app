@@ -1,0 +1,57 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.profile__foto {
+    border-radius: 50%;
+    width: 35vw;
+    display: inline;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.profile__name {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.counters {
+    display: flex;
+    gap: 10vw;
+    justify-content: center;
+}
+
+.counters p {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 10px;
+    align-self: center;
+}
+
+.counter {
+    background-color: var(--color-tag);
+    border-radius: 5px;
+    padding: 3px;
+    gap: 5px;
+    display: flex;
+}
+
+.counter__icon {
+    height: 50px;
+}
+
+.settings__dark {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.settings__dark-label {
+    font-weight: bold;
+}

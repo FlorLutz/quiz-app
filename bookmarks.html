@@ -8,7 +8,55 @@
   </head>
   <body>
     <header><h1>Quiz App</h1></header>
-    <main>
+    <main class="main-quiz">
+      <section class="card">
+        <picture>
+          <img
+            class="card__bookmark"
+            src="images/bookmark_marked.png"
+            alt="bookmark"
+          />
+        </picture>
+        <p class="card__question">Is this a question?</p>
+        <button class="card__button">Show answer</button>
+        <div class="card__tag-box">
+          <div class="card__tag">#html</div>
+          <div class="card__tag">#css</div>
+          <div class="card__tag">#js</div>
+        </div>
+      </section>
+      <section class="card">
+        <picture>
+          <img
+            class="card__bookmark"
+            src="images/bookmark_marked.png"
+            alt="bookmark"
+          />
+        </picture>
+        <p class="card__question">Is this a question?</p>
+        <button class="card__button">Show answer</button>
+        <div class="card__tag-box">
+          <div class="card__tag">#html</div>
+          <div class="card__tag">#css</div>
+          <div class="card__tag">#js</div>
+        </div>
+      </section>
+      <section class="card">
+        <picture>
+          <img
+            class="card__bookmark"
+            src="images/bookmark_marked.png"
+            alt="bookmark"
+          />
+        </picture>
+        <p class="card__question">Is this a question?</p>
+        <button class="card__button">Show answer</button>
+        <div class="card__tag-box">
+          <div class="card__tag">#html</div>
+          <div class="card__tag">#css</div>
+          <div class="card__tag">#js</div>
+        </div>
+      </section>
       <section class="card">
         <picture>
           <img
@@ -28,21 +76,15 @@
     </main>
     <footer>
       <nav>
-        <div class="nav__item">
-          <a href="index.html">
-            <img class="footer__image" src="images/home.png" alt="home" />
-          </a>
-        </div>
-        <div class="nav__item" style="background-color: yellow">
-          <a href="bookmarks.html">
-            <img class="footer__image" src="images/bookmarks.png" alt="home" />
-          </a>
-        </div>
-        <div class="nav__item">
-          <a href="profile.html">
-            <img class="footer__image" src="images/profile.png" alt="home" />
-          </a>
-        </div>
+        <a class="nav__item" href="index.html">
+          <img class="footer__image" src="images/home.png" alt="home" />
+        </a>
+        <a class="nav__item nav__item--selected" href="bookmarks.html">
+          <img class="footer__image" src="images/bookmarks.png" alt="home" />
+        </a>
+        <a class="nav__item" href="profile.html">
+          <img class="footer__image" src="images/profile.png" alt="home" />
+        </a>
       </nav>
     </footer>
   </body>
