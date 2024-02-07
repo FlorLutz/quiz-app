@@ -37,9 +37,12 @@
 
 .card__tag-box {
     display: flex;
+    width: 90%;
     gap: 5px;
     background-color: var(--color-boxes);
     align-self: flex-start;
+    padding-top: 10px;
+    border-top: 2px dashed var(--color-boxes-border);
 }
 
 .card__tag {
