@@ -1,0 +1,56 @@
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --color-foot-head: blue;
+    --color-boxes: lightblue;
+    --color-active: yellow;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+}
+
+header {
+    position: fixed;
+    background-color: var(--color-foot-head);
+    top: 0;
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-boxes);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    background-color: var(--color-foot-head);
+    padding: 10px;
+    bottom: 0;
+}
+
+main {
+    margin-top: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 600px
+}
