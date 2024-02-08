@@ -6,7 +6,8 @@
 
 .profile__foto {
     border-radius: 50%;
-    width: 35vw;
+    height: 30vh;
+    max-height: 400px;
     display: inline;
 }
 
@@ -49,7 +50,7 @@ h2 {
 .settings__dark {
     display: flex;
     flex-direction: row;
-    gap: 5vw;
+    gap: 15vw;
 }
 
 .settings__dark-label {

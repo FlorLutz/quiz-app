@@ -12,14 +12,14 @@
 }
 
 body {
-    width: 100vw;
+    min-width: 400px;
 }
 
 header {
     position: fixed;
     background-color: var(--color-foot-head);
     top: 0;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     padding: 20px;
     font-size: 1.5rem;
@@ -30,14 +30,23 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    gap: 3vw;
-    margin: 110px 5vw;
+    gap: 30px;
+    margin: 110px 0;
+}
+
+.main-quiz {
+    align-items: center;
+}
+
+.main-profile {
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 footer {
     position: fixed;
     background-color: var(--color-foot-head);
-    width: 100vw;
+    width: 100%;
     bottom: 0;
     border: solid 2px var(--color-foot-head-border);
 }
@@ -78,6 +87,7 @@ nav {
 
     .main-quiz {
         flex-flow: row wrap;
+        justify-content: center;
     }
 
     .card {

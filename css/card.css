@@ -6,12 +6,10 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 94vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80vw;
     position: relative;
     border: 2px solid var(--color-boxes-border);
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 10px black;
 }
 
 .card__bookmark {
