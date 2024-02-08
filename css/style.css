@@ -88,6 +88,7 @@ nav {
     .main-quiz {
         flex-flow: row wrap;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .card {
