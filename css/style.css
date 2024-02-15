@@ -19,12 +19,19 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 30px;
     margin: 110px 0;
 }
 
 .main-quiz {
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    /* align-items: center; */
+    .main-quiz {
+        align-items: flex-start;
+    }
 }
 
 .main-profile {
@@ -74,12 +81,6 @@ nav {
         margin-top: 130px;
     }
 
-    .main-quiz {
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
     .card {
         width: calc(87vw/2);
     }
@@ -92,11 +93,12 @@ nav {
 
     main {
         margin-top: 150px;
-
-        .card {
-            width: calc(84vw/3);
-        }
     }
+
+    .card {
+        width: calc(84vw/3);
+    }
+
 }
 
 @media (prefers-color-scheme: dark) {
