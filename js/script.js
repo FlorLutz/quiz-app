@@ -48,6 +48,7 @@ function createImageElement(elementClass, srcValue, altValue) {
 }
 
 const mainIndex = document.querySelector('[data-js="main-index"]');
+const mainBookmarks = document.querySelector('[data-js="main-bookmarks"]');
 let i = 0;
 
 for (const entry in qsAndAs) {
@@ -55,12 +56,12 @@ for (const entry in qsAndAs) {
   mainIndex.append(section);
   const picture = createTextElement("picture");
   section.append(picture);
-  const image = createImageElement(
+  const imageBookmark = createImageElement(
     "card__bookmark",
     "images/bookmark_not-marked.png",
     "click to add bookmark"
   );
-  picture.append(image);
+  picture.append(imageBookmark);
   const paragraphQuestion = createTextElement(
     "p",
     "card__question",
@@ -87,6 +88,16 @@ for (const entry in qsAndAs) {
   divTagBox.append(divTag2);
   const divTag3 = createTextElement("div", "card__tag", "magic");
   divTagBox.append(divTag3);
+
+  imageBookmark.addEventListener("click", (event) => {
+    console.log(imageBookmark.src);
+    imageBookmark.src =
+      imageBookmark.src === "images/bookmark_marked.png"
+        ? "images/bookmark_not-marked.png" //line does not work?!, not going back to not marked
+        : "images/bookmark_marked.png";
+    console.log(imageBookmark.src);
+    // mainBookmarks.append(this.section); //needs cookies?
+  });
   i++;
 }
 
