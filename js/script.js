@@ -49,6 +49,8 @@ function createImageElement(elementClass, srcValue, altValue) {
 
 const mainIndex = document.querySelector('[data-js="main-index"]');
 const mainBookmarks = document.querySelector('[data-js="main-bookmarks"]');
+let questionCounter = 0;
+let bookmarkCounter = 0;
 let i = 0;
 
 for (const entry in qsAndAs) {
@@ -78,6 +80,9 @@ for (const entry in qsAndAs) {
   paragraphAnswer.setAttribute("hidden", "hidden");
   button.addEventListener("click", () => {
     paragraphAnswer.removeAttribute("hidden");
+    questionCounter++;
+    console.log("questionCounter", questionCounter);
+    button.setAttribute("hidden", "hidden");
   });
   section.append(paragraphAnswer);
   const divTagBox = createTextElement("div", "card__tag-box");
@@ -90,19 +95,20 @@ for (const entry in qsAndAs) {
   divTagBox.append(divTag3);
 
   imageBookmark.addEventListener("click", (event) => {
-    console.log(imageBookmark.src);
-    imageBookmark.src =
-      imageBookmark.src === "images/bookmark_marked.png"
-        ? "images/bookmark_not-marked.png" //line does not work?!, not going back to not marked
-        : "images/bookmark_marked.png";
-    console.log(imageBookmark.src);
-    // mainBookmarks.append(this.section); //needs cookies?
+    if (imageBookmark.src.includes("not-marked")) {
+      imageBookmark.src = "images/bookmark_marked.png";
+      bookmarkCounter++;
+      // mainBookmarks.remove(section);
+    } else {
+      imageBookmark.src = "images/bookmark_not-marked.png";
+      bookmarkCounter--;
+      // mainBookmarks.append(section);
+    }
+    console.log("bookmarkCounter", bookmarkCounter);
+    // mainBookmarks.append(section); //needs cookies to work?
   });
   i++;
 }
-
-// call these functions in a loop for all object key-value pairs
-//tagcontents?
 
 /* <section class="card">
 <picture>
