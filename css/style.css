@@ -2,6 +2,7 @@
 @import url("variables.css");
 @import url("/css/components/card.css");
 @import url("/css/components/profile.css");
+@import url("/css/components/question.css");
 @import url("/css/components/switch.css");
 
 header {
@@ -73,32 +74,15 @@ nav {
 }
 
 @media (min-width: 900px) {
-    :root {
-        font-size: 20px;
-    }
-
-    main {
-        margin-top: 130px;
-    }
-
     .card {
         width: calc(87vw/2);
     }
 }
 
 @media (min-width: 1200px) {
-    :root {
-        font-size: 24px;
-    }
-
-    main {
-        margin-top: 150px;
-    }
-
     .card {
         width: calc(84vw/3);
     }
-
 }
 
 @media (prefers-color-scheme: dark) {

@@ -28,10 +28,6 @@ const qsAndAs = {
     "The Marauder's Map",
 };
 
-// The functions could include these parameters and lines to make it possible to set data;js;attr. or similar:
-// , atttribute, attributeValue
-// newTextElement.setAttribute(attribute, attributevalue);
-
 function createTextElement(elementType, elementClass, content) {
   const newTextElement = document.createElement(elementType);
   newTextElement.classList.add(elementClass);
@@ -48,7 +44,6 @@ function createImageElement(elementClass, srcValue, altValue) {
 }
 
 const mainIndex = document.querySelector('[data-js="main-index"]');
-const mainBookmarks = document.querySelector('[data-js="main-bookmarks"]');
 let questionCounter = 0;
 let bookmarkCounter = 0;
 let i = 0;
@@ -79,10 +74,16 @@ for (const entry in qsAndAs) {
   );
   paragraphAnswer.setAttribute("hidden", "hidden");
   button.addEventListener("click", () => {
-    paragraphAnswer.removeAttribute("hidden");
-    questionCounter++;
-    console.log("questionCounter", questionCounter);
-    button.setAttribute("hidden", "hidden");
+    if (button.textContent === "Show answer") {
+      paragraphAnswer.removeAttribute("hidden");
+      button.textContent = "Hide answer";
+      questionCounter++;
+    } else {
+      console.log("questionCounter", questionCounter);
+      paragraphAnswer.setAttribute("hidden", "hidden");
+      button.textContent = "Show answer";
+      questionCounter--;
+    }
   });
   section.append(paragraphAnswer);
   const divTagBox = createTextElement("div", "card__tag-box");
@@ -109,21 +110,3 @@ for (const entry in qsAndAs) {
   });
   i++;
 }
-
-/* <section class="card">
-<picture>
-  <img
-    class="card__bookmark"
-    src="images/bookmark_not-marked.png"
-    alt="click to add bookmark"
-  />
-</picture>
-<p class="card__question">Is this a question? Is this a question?</p>
-<button class="card__button">Show answer</button>
-<p class="card__question">Is this a question? Is this a question?</p>
-<div class="card__tag-box">
-  <div class="card__tag">#html</div>
-  <div class="card__tag">#css</div>
-  <div class="card__tag">#js</div>
-</div>
-</section> */

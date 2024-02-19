@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+    <script src="js/profile.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -52,7 +52,7 @@
 
           <!-- This code is copied together with the according css to create the switch. -->
           <label class="switch" id="dark-mode">
-            <input type="checkbox" />
+            <input type="checkbox" data-js="dark-check"/>
             <span class="slider round"></span>
           </label>
         </div>
@@ -66,6 +66,9 @@
         </a>
         <a class="nav__item" href="bookmarks.html" aria-label="click to go to bookmarks-page">
           <img class="footer__image" src="images/bookmarks.png" alt="bookmarks" />
+        </a>
+        <a class="nav__item" href="new_question.html">
+          <img class="footer__image" src="images/add_question.png" alt="new question" />
         </a>
         <p class="nav__item nav__item--selected" href="profile.html">
           <img class="footer__image" src="images/profile.png" alt="profile" />
