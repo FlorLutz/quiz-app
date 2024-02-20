@@ -1,7 +1,58 @@
+.main-question {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: var(--color-boxes);
+    border-radius: 20px;
+    padding: 20px;
+    width: 80vw;
+    border: 2px solid var(--color-boxes-border);
+    box-shadow: 0 0 10px black;
+}
+
+.form__button {
+    width: 100px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.card--new {
+    animation-name: fly;
+    animation-duration: 3s;
+}
+
+@keyframes fly {
+    0% {
+        left: -20px;
+        opacity: 0;
+    }
+
+    20% {
+        left: 20px;
+        opacity: 20%;
+    }
+
+    40% {
+        left: -10px;
+        opacity: 50%;
+    }
+
+    60% {
+        left: 10px;
+        opacity: 80%;
+    }
+
+    100% {
+        left: 0;
+        opacity: 100%;
+
+    }
 }
 
 label {

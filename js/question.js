@@ -13,45 +13,9 @@ function createImageElement(elementClass, srcValue, altValue) {
   return newImageElement;
 }
 
-const mainQuestion = document.querySelector('[data-js="main-new-question"]');
-const formQuestion = document.querySelector('[data-js="form-question"]');
-const questionCharLeft = document.querySelector(
-  '[data-js="question-characters"]'
-);
-const answerCharLeft = document.querySelector('[data-js="answer-characters"]');
-
-formQuestion.yourQuestion.focus();
-
-formQuestion.yourQuestion.addEventListener("input", () => {
-  questionCharLeft.textContent =
-    150 -
-    formQuestion.yourQuestion.value.length +
-    (150 - formQuestion.yourQuestion.value.length === 1
-      ? " character left"
-      : " characters left");
-});
-formQuestion.yourAnswer.addEventListener("input", () => {
-  answerCharLeft.textContent =
-    150 -
-    formQuestion.yourAnswer.value.length +
-    (150 - formQuestion.yourAnswer.value.length === 1
-      ? " character left"
-      : " characters left");
-});
-
-console.log("formQuestion", formQuestion);
-
-formQuestion.addEventListener("submit", (event) => {
-  console.log("bla");
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
-  console.log("data", data);
-  createNewQuestion(data.yourQuestion, data.yourAnswer, data.yourTags);
-});
-
 function createNewQuestion(question, answer, tags) {
   const section = createTextElement("section", "card");
+  section.classList.add("card--new");
   mainQuestion.append(section);
   const picture = createTextElement("picture");
   section.append(picture);
@@ -92,7 +56,6 @@ function createNewQuestion(question, answer, tags) {
       }
     }
   }
-
   imageBookmark.addEventListener("click", (event) => {
     if (imageBookmark.src.includes("not-marked")) {
       imageBookmark.src = "images/bookmark_marked.png";
@@ -102,20 +65,42 @@ function createNewQuestion(question, answer, tags) {
   });
 }
 
-/* <section class="card">
-<picture>
-<img
-class="card__bookmark"
-src="images/bookmark_not-marked.png"
-alt="click to add bookmark"
-/>
-</picture>
-<p class="card__question">Is this a question? Is this a question?</p>
-<button class="card__button">Show answer</button>
-<p class="card__question">Is this a question? Is this a question?</p>
-<div class="card__tag-box">
-<div class="card__tag">#html</div>
-<div class="card__tag">#css</div>
-<div class="card__tag">#js</div>
-</div>
-</section> */
+const mainQuestion = document.querySelector('[data-js="main-new-question"]');
+const formQuestion = document.querySelector('[data-js="form-question"]');
+const questionCharLeft = document.querySelector(
+  '[data-js="question-characters"]'
+);
+const answerCharLeft = document.querySelector('[data-js="answer-characters"]');
+
+formQuestion.yourQuestion.focus();
+
+formQuestion.yourQuestion.addEventListener("input", () => {
+  questionCharLeft.textContent =
+    150 -
+    formQuestion.yourQuestion.value.length +
+    (150 - formQuestion.yourQuestion.value.length === 1
+      ? " character left"
+      : " characters left");
+});
+formQuestion.yourAnswer.addEventListener("input", () => {
+  answerCharLeft.textContent =
+    150 -
+    formQuestion.yourAnswer.value.length +
+    (150 - formQuestion.yourAnswer.value.length === 1
+      ? " character left"
+      : " characters left");
+});
+
+formQuestion.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  console.log("data", data);
+  createNewQuestion(data.yourQuestion, data.yourAnswer, data.yourTags);
+  formQuestion.yourQuestion.value = "";
+  formQuestion.yourAnswer.value = "";
+  formQuestion.yourTags.value = "";
+  questionCharLeft.textContent = "";
+  answerCharLeft.textContent = "";
+  formQuestion.yourQuestion.focus();
+});

@@ -28,11 +28,6 @@ main {
 .main-quiz {
     flex-flow: row wrap;
     justify-content: center;
-
-    /* align-items: center; */
-    .main-quiz {
-        align-items: flex-start;
-    }
 }
 
 .main-profile {
@@ -63,6 +58,7 @@ nav {
     text-align: center;
     padding: 10px;
     display: block;
+    transition: background-color .5s ease-in;
 }
 
 .nav__item:not(.nav__item--selected):hover {
@@ -86,11 +82,8 @@ nav {
 }
 
 @media (prefers-color-scheme: dark) {
-    * {
-        color: white;
-    }
-
     body {
         background-color: black;
+        color: white;
     }
 }
