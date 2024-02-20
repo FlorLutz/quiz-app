@@ -81,7 +81,16 @@ formQuestion.yourQuestion.addEventListener("input", () => {
     (150 - formQuestion.yourQuestion.value.length === 1
       ? " character left"
       : " characters left");
+  if (formQuestion.yourQuestion.value.length === 150) {
+    questionCharLeft.classList.add("char-left-red");
+  } else {
+    questionCharLeft.classList.remove("char-left-red");
+  }
+  if (formQuestion.yourQuestion.value.length === 0) {
+    questionCharLeft.textContent = "";
+  }
 });
+
 formQuestion.yourAnswer.addEventListener("input", () => {
   answerCharLeft.textContent =
     150 -
@@ -89,6 +98,14 @@ formQuestion.yourAnswer.addEventListener("input", () => {
     (150 - formQuestion.yourAnswer.value.length === 1
       ? " character left"
       : " characters left");
+  if (formQuestion.yourAnswer.value.length === 150) {
+    answerCharLeft.classList.add("char-left-red");
+  } else {
+    answerCharLeft.classList.remove("char-left-red");
+  }
+  if (formQuestion.yourAnswer.value.length === 0) {
+    answerCharLeft.textContent = "";
+  }
 });
 
 formQuestion.addEventListener("submit", (event) => {

@@ -12,13 +12,13 @@
     <main class="main-question" data-js="main-new-question">
       <form action="" data-js="form-question">
         <label for="question">Your question:</label>
-        <textarea name="yourQuestion" id="question" maxlength="150" cols="30" rows="5"></textarea>
+        <textarea name="yourQuestion" class="textinput" id="question" maxlength="150" cols="30" rows="4"></textarea>
         <p><span data-js="question-characters"></span></p>
         <label for="answer">Your answer:</label>
-        <textarea name="yourAnswer" id="answer" maxlength="150" cols="30" rows="5"></textarea>
+        <textarea name="yourAnswer" class="textinput" id="answer" maxlength="150" cols="30" rows="4"></textarea>
         <p><span data-js="answer-characters"></span></p>
         <label for="tag">Tags:</label> <br>
-        <input name="yourTags" id="tag" type="text" placeholder="enter up to three tags, seperated by comma">
+        <input name="yourTags" id="tag" class="textinput" type="text" maxlength="70" placeholder="enter up to three tags, seperated by comma">
         <br>
         <input type="submit" value="Submit" data-js="submit-button" class="card__button form__button">
       </form>
