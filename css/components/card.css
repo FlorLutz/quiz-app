@@ -1,56 +1,56 @@
 .card {
-    background-color: var(--color-boxes);
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 80vw;
-    position: relative;
-    border: 2px solid var(--color-boxes-border);
-    box-shadow: 0 0 10px black;
+  background-color: var(--color-boxes);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 80vw;
+  position: relative;
+  border: 2px solid var(--color-boxes-border);
+  box-shadow: 0 0 10px black;
 }
 
 .card__bookmark {
-    width: 40px;
-    position: absolute;
-    top: -5px;
-    right: 10px;
+  width: 40px;
+  position: absolute;
+  top: -5px;
+  right: 10px;
 }
 
 .card__question {
-    font-size: 1.6rem;
-    text-align: center;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .card__button {
-    padding: 5px;
-    font-size: 1.4rem;
-    border-radius: 5px;
-    text-underline-offset: 0.6em;
-    transition: background-color 2s ease-in-out, text-underline-offset .8s;
+  padding: 5px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  text-underline-offset: 0.6em;
+  transition: background-color 2s ease-in-out, text-underline-offset 0.8s;
 }
 
 .card__button:hover {
-    background-color: var(--color-tag);
-    text-decoration: underline 2.5px black;
-    text-underline-offset: 0.1em;
-    transition: background-color 2s ease-in-out, text-underline-offset .8s;
+  background-color: var(--color-tag);
+  text-decoration: underline 2.5px black;
+  text-underline-offset: 0.1em;
+  transition: background-color 2s ease-in-out, text-underline-offset 0.8s;
 }
 
 .card__tag-box {
-    display: flex;
-    width: 90%;
-    gap: 5px;
-    background-color: var(--color-boxes);
-    align-self: flex-start;
-    padding-top: 10px;
-    border-top: 2px dashed var(--color-boxes-border);
+  display: flex;
+  width: 90%;
+  gap: 5px;
+  background-color: var(--color-boxes);
+  align-self: flex-start;
+  padding-top: 10px;
+  border-top: 2px dashed var(--color-boxes-border);
 }
 
 .card__tag {
-    background-color: var(--color-tag);
-    border-radius: 5px;
-    padding: 2px;
+  background-color: var(--color-tag);
+  border-radius: 5px;
+  padding: 3px;
 }

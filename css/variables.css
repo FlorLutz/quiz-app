@@ -1,10 +1,10 @@
 :root {
-    --primary-color: white;
-    --secondary-color: black;
-    --color-foot-head: rgb(67, 206, 252);
-    --color-boxes: lightblue;
-    --color-boxes-border: rgb(90, 114, 122);
-    --color-foot-head-border: rgb(20, 53, 63);
-    --color-tag: #f4f467;
-    --color-current-page: rgb(177, 235, 238);
+  --primary-color: white;
+  --secondary-color: black;
+  --color-foot-head: rgb(67, 206, 252);
+  --color-boxes: lightblue;
+  --color-boxes-border: rgb(90, 114, 122);
+  --color-foot-head-border: rgb(20, 53, 63);
+  --color-tag: rgb(67, 206, 252);
+  --color-current-page: rgb(177, 235, 238);
 }
