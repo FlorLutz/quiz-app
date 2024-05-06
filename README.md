@@ -1,6 +1,6 @@
 # 1st Spiced Project
 
-## Descrioption
+## Description
 This was the first project of the spiced full-stack bootcamp. It was a solo-project, in which I created a basic quiz application using vanilla JS.
 
 ## Key Learnings
