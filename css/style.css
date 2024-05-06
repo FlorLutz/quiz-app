@@ -1,89 +1,89 @@
 @import url("global.css");
 @import url("variables.css");
-@import url("/css/components/card.css");
-@import url("/css/components/profile.css");
-@import url("/css/components/question.css");
-@import url("/css/components/switch.css");
+@import url("components/card.css");
+@import url("components/profile.css");
+@import url("components/question.css");
+@import url("components/switch.css");
 
 header {
-    position: fixed;
-    background-color: var(--color-foot-head);
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.5rem;
-    z-index: 1;
-    border: solid 2px var(--color-foot-head-border);
+  position: fixed;
+  background-color: var(--color-foot-head);
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  z-index: 1;
+  border: solid 2px var(--color-foot-head-border);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    margin: 110px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin: 110px 0;
 }
 
 .main-quiz {
-    flex-flow: row wrap;
-    justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .main-profile {
-    margin-left: 5vw;
-    margin-right: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 footer {
-    position: fixed;
-    background-color: var(--color-foot-head);
-    width: 100%;
-    bottom: 0;
-    border: solid 2px var(--color-foot-head-border);
+  position: fixed;
+  background-color: var(--color-foot-head);
+  width: 100%;
+  bottom: 0;
+  border: solid 2px var(--color-foot-head-border);
 }
 
 .footer__image {
-    height: 50px;
+  height: 50px;
 }
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .nav__item {
-    width: calc(100vw/3);
-    text-align: center;
-    padding: 10px;
-    display: block;
-    transition: background-color .5s ease-in;
+  width: calc(100vw / 3);
+  text-align: center;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.5s ease-in;
 }
 
 .nav__item:not(.nav__item--selected):hover {
-    background-color: var(--color-tag);
+  background-color: var(--color-tag);
 }
 
 .nav__item--selected {
-    background-color: var(--color-current-page);
+  background-color: var(--color-current-page);
 }
 
 @media (min-width: 900px) {
-    .card {
-        width: calc(87vw/2);
-    }
+  .card {
+    width: calc(87vw / 2);
+  }
 }
 
 @media (min-width: 1200px) {
-    .card {
-        width: calc(84vw/3);
-    }
+  .card {
+    width: calc(84vw / 3);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
-    }
+  body {
+    background-color: black;
+    color: white;
+  }
 }
